@@ -30,7 +30,7 @@ I decided on this section:
 
 ![image](https://github.com/user-attachments/assets/9e7a776e-1a21-4105-8f62-653ae9678bdc)
 
-To start, I first made a boarder around the canvas. I then carefully added the lines for this, and made sure that eveything was even. After this, I added some coloured `rect` as a reference point of where the colours were on the original painting, and so that it could help me decide where to put the images better.
+To start, I first made a boarder around the canvas. I then carefully added the lines for this, and made sure that eveything was even. After this, I added some coloured rectangles as a reference point of where the colours were on the original painting, and so that it could help me decide where to put the images better.
 
 I used this website to help me find the RGB of his painting:
 
