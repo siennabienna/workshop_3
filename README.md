@@ -120,6 +120,8 @@ img.updatePixels();
 
 ![image](https://github.com/user-attachments/assets/82cb3be6-0477-4db6-a480-d1b64b64d1ab)
 
+I was very happy with how this turned out, as it moved like static and had a very old laptop feel to it.
+
 
 # Creating my Image Collage
 
@@ -146,16 +148,13 @@ function draw() {
 }
 ```
 
-![image](https://github.com/user-attachments/assets/93abf8cf-3f50-4545-92bd-bb63b33b5792)
-
-
 I created this simple sketch, that gave me an idea of how I would do this. I decided to only use a section of the painting, just to make things a little easier whilst I was still figuring out how `line` worked. 
 
 I decided on this section:
 
 ![image](https://github.com/user-attachments/assets/9e7a776e-1a21-4105-8f62-653ae9678bdc)
 
-I was very happy with how this turned out, as it moved like static and had a very old laptop feel to it.
+
 
 
 
