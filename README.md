@@ -118,6 +118,9 @@ img.updatePixels();
 
 ```
 
+![image](https://github.com/user-attachments/assets/82cb3be6-0477-4db6-a480-d1b64b64d1ab)
+
+
 # Creating my Image Collage
 
 I decided an interesting way to create an image collage was to do it like a Mondrian painting. My plan was to create a simple grid with lines, and then create images that would appear within the boxes of the painting. To do this, I first started by finding a Mondrian painting that I liked, and that would be simple enough to recreate in p5 using `line`. The one I found is called 'Composition with Large Red Plane, Yellow, Black, Grey and Blue', 1921.
