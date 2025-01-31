@@ -155,9 +155,6 @@ I decided on this section:
 ![image](https://github.com/user-attachments/assets/9e7a776e-1a21-4105-8f62-653ae9678bdc)
 
 
-
-
-
 To start, I first made a boarder around the canvas. I then carefully added the lines for this, and made sure that eveything was even. After this, I added some coloured rectangles as a reference point of where the colours were on the original painting, and so that it could help me decide where to put the images better.
 
 I used this website to help me find the RGB of his painting:
@@ -205,5 +202,81 @@ Here is my how I drew the lines:
 
 Link to p5 for 'Mondrian lines': https://editor.p5js.org/siennabearbum/full/fMPzCDzuY 
 
-Next, I needed to find some images to put into the squares.
+# Using an Array
 
+Next, I needed to find some images to put into the squares. I found some photos of the Beatles on pinterest that were in black and white so that I could change the colour of the pixels better later. I then made an array so that the images could be randmomised when the page is refreshed. I made this when I was very tired so I just named all the Beatles pictures rats because that was in my original code that I recycled. Sorry for the confusion.
+
+```js
+let imgs = [];
+let rat1, rat2, rat3; rat4; rat5; rat6;
+
+function preload(){
+  rat1 = loadImage('Images/beatle.jpg');
+  rat2 = loadImage('Images/beatles.jpg');
+  rat3 = loadImage('Images/ringo.jpg');
+  rat4 = loadImage('Images/glasses.jpg')
+  rat5 = loadImage('Images/paul mccartney.jpg')
+  rat6 = loadImage('Images/paul.jpg')
+
+}
+```
+
+Next, I implemented the array in a function I made called `drawBeatle()`.
+
+```js
+function drawBeatle(x, y, width, height, R, G, B){
+  let srcImg = random(imgs);
+    let img = createImage(srcImg.width, srcImg.height);
+    img.copy(srcImg, 0, 0, img.width, img.height, 0, 0, img.width, img.height);
+```
+
+This allowed me to add the images to the canvas. I also moved the coordinates in `setup()` so that they would sit in the squares I wanted them to. I also added some text as a reference to one of my favourite Beatles songs.
+
+```js
+function setup() {
+  
+  createCanvas(400, 400);
+  pixelDensity(1);
+  frameRate(1);
+  imgs.push(rat1); 
+  imgs.push(rat2);
+  imgs.push(rat3);
+  imgs.push(rat4);
+  imgs.push(rat5);
+  imgs.push(rat6);
+
+    // image(imgs[2], 0, 0);
+    let r = random(imgs);
+    drawBeatle(8, 8, 238, 238, 221, 1, 0);
+    drawBeatle(125, 325, 125, 68, 128, 128, 128);
+    drawMondrian()
+    noStroke()
+    textAlign(CENTER,CENTER);
+  text('twist and shout', 325, 290);
+
+```
+
+# Experimenting with Pixels
+
+I wanted to change the colour of the pixels to match the colour of the squares of the Mondrian painting of where they would sit. I added the RGB value from the painting to the images depending on which square they were in. One array was assigned red pixels, and one white.
+
+```js
+ img.loadPixels();
+
+    for (let y = 0; y < img.height; y ++){
+      for (let x = 0; x < img.width; x ++){
+        let index = (x + y * img.width) * 4;
+        img.pixels[index] += R
+        img.pixels[index + 1] += G
+        img.pixels[index + 2] += B
+        img.pixels[index + 3] = 255
+    
+      }
+    }
+```
+I had to do a bit of trial and error because the colour didn't look quite right.
+
+# Ideas for Future Developments
+- Make it so there's a function inside the code that allows the page to be refreshed from there, perhaps using a button once I know how
+- Make it so that the code is able to generate a unique Mondrian painting with different squares having images
+- Larger scale Mondrian style grind that would allow 10 different slots for photographs that could change on a timeout
